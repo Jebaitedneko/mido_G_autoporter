@@ -7,6 +7,7 @@ zipedit(){
     unzip "$1" "boot.img" -d ./ 
     cd /tmp
     sed -i 's/\"mido\"/getprop\(\"ro.product.device\"\)/g' "META-INF/com/google/android/updater-script"
+    sed -i 's/\"oxygen\"/getprop\(\"ro.product.device\"\)/g' "META-INF/com/google/android/updater-script"
     sed -i 's/cust/vendor/g' "META-INF/com/google/android/updater-script"
     zip --update "$curdir/$1" "META-INF/com/google/android/updater-script"
     cd "$curdir"
@@ -25,6 +26,6 @@ zipedit(){
     cd .. && ./repackimg.sh
     mv image-new.img ../$1.$( date '+%F_%H:%M:%S' ).img
     rm boot.img
-    
+    cd "$curdir"
 }
 zipedit $1
