@@ -1,6 +1,20 @@
 # mido_G_autoporter
 
-INSTRUCTIONS:
+Treble compatible recoveries can be found in treble-recovery
+
+Patches to be applied after flashing mido treble rom are in treble-fixes
+
+################ VENDOR PARTITIONING ################
+1. Backup all your data to pc
+2. Install treble recovery
+3. Flash 1G repartition zip provided here
+4. Use the volume buttons and select the following:
+	1GB (1024MB) Vendor Partition
+	FROM THE END OF DATA
+5. Wipe everything except internal storage
+6. Reboot recovery
+
+################ AUTO PORTER INSTRUCTIONS ################
 1. Clone this repo
 2. Download a treble mido rom of your choice and place it inside the repo folder root
 3. `sudo ./edit.sh rom.zip`
