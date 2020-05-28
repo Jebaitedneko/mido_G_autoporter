@@ -17,10 +17,10 @@ Treble compatible recoveries can be found in treble-recovery
 1. Clone this repo
 2. Download a treble mido rom of your choice and place it inside the repo folder root
 3. `sudo ./port.sh rom.zip`
-4. You'll have a modified zip and a generated boot.img in the repo root
+4. You'll have a modified zip in the repo root
 5. Wipe all partitions except internal storage, 
 6. Reboot recovery (important)
-7. Install zip and then install new generated boot.img
+7. Install zip and then vendor patches from treble-fixes
 
 #### VENDOR PATCHES ####
 Patches to be applied after flashing mido treble roms are in treble-fixes
