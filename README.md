@@ -11,7 +11,10 @@ Treble compatible recoveries can be found in treble-recovery
 	1GB (1024MB) Vendor Partition
 	FROM THE END OF DATA
 5. Wipe everything except internal storage
-6. Reboot recovery
+6. Format vendor (if it shows failed to mount)
+7. Reboot recovery
+
+NOTE: For those who get an Error 2 use the rewritten repartition zip
 
 #### AUTO PORTER INSTRUCTIONS ####
 1. Clone this repo
