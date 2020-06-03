@@ -10,7 +10,9 @@ zipedit(){
     rm boot.img-zImage && mv Image.gz-dtb boot.img-zImage
     #cmdline magic
     sed -i 's/enforcing/permissive/g' boot.img-cmdline
+    sed -i 's/$/ androidboot\.selinux\=\permissive/' boot.img-cmdline
     sed -i 's/$/ firmware_class\.path\=\/vendor\/firmware\_mnt\/image/' boot.img-cmdline
+    cat boot.img-cmdline | sed 's/ /\n/g' | sort -u | tr '\n' ' ' > bcl && rm boot.img-cmdline && mv bcl boot.img-cmdline
     #repacking magic
     cd .. && ./repackimg.sh
     mv image-new.img ../boot_G.img && rm boot.img
