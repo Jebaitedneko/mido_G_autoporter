@@ -1,16 +1,17 @@
 zipedit(){
     #updater script magic
     curdir=$(pwd)
-    [ -e "/tmp/META-INF/com/google/android/updater-script" ] && rm /tmp/META-INF/com/google/android/updater-script
-    unzip "$1" "META-INF/com/google/android/updater-script" -d /tmp
+    updater=META-INF/com/google/android/updater-script
+    [ -e "/tmp/$updater" ] && rm /tmp/$updater
+    unzip "$1" "$updater" -d /tmp
     unzip "$1" "boot.img" -d ./
     [ `unzip -Z1 $1 | grep compatibility.zip` ] && zip -d $1 "compatibility.zip" 
     cd /tmp
-    sed -i 's/\"mido\"/getprop\(\"ro.product.device\"\)/g' "META-INF/com/google/android/updater-script"
-    sed -i 's/\"oxygen\"/getprop\(\"ro.product.device\"\)/g' "META-INF/com/google/android/updater-script"
-    sed -i 's/cust/vendor/g' "META-INF/com/google/android/updater-script"
-    sed -i 's/boot\.img/boot\_G\.img/g' "META-INF/com/google/android/updater-script"
-    zip --update "$curdir/$1" "META-INF/com/google/android/updater-script"
+    sed -i 's/\"mido\"/getprop\(\"ro.product.device\"\)/g' "$updater"
+    sed -i 's/\"oxygen\"/getprop\(\"ro.product.device\"\)/g' "$updater"
+    sed -i 's/cust/vendor/g' "$updater"
+    sed -i 's/boot\.img/boot\_G\.img/g' "$updater"
+    zip --update "$curdir/$1" "$updater"
     cd "$curdir"
     #unpacking magic
     mv boot.img AIK-Linux
