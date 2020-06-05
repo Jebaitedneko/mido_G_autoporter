@@ -1,3 +1,4 @@
+#!/bin/bash
 zipedit(){
     curdir=$(pwd)
     unzip "$1" "boot.img" -d ./ 

@@ -1,3 +1,4 @@
+#!/bin/bash
 zipedit(){
     #updater script magic
     curdir=$(pwd)
