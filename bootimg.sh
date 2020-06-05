@@ -21,4 +21,5 @@ zipedit(){
     mv "$1" "${1}_PORTED.zip"
     echo "\n\nPORTING FINISHED. FLASH '${1}_PORTED.zip' FOLLOWED BY PATCHES IN 'treble-fixes'\n\n"
 }
+apt install zip unzip
 zipedit $1

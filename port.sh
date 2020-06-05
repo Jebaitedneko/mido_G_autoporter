@@ -1,7 +1,7 @@
 zipedit(){
     #updater script magic
     curdir=$(pwd)
-    [ -e "/tmp/META-INF/com/google/android/updater-script" ] && echo "Removing old file" && rm /tmp/META-INF/com/google/android/updater-script
+    [ -e "/tmp/META-INF/com/google/android/updater-script" ] && rm /tmp/META-INF/com/google/android/updater-script
     unzip "$1" "META-INF/com/google/android/updater-script" -d /tmp
     unzip "$1" "boot.img" -d ./
     [ `unzip -Z1 $1 | grep compatibility.zip` ] && zip -d $1 "compatibility.zip" 
@@ -32,4 +32,5 @@ zipedit(){
     mv "$1" "${1}_PORTED.zip"
     echo "\n\nPORTING FINISHED. FLASH '${1}_PORTED.zip' FOLLOWED BY PATCHES IN 'treble-fixes'\n\n"
 }
+apt install zip unzip
 zipedit $1
