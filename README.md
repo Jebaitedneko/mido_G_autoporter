@@ -1,7 +1,7 @@
 #### [LINUX / TMUX]             [MIDO/OXYGEN] ####
 
 #### TREBLE RECOVERIES ####
-Treble compatible recoveries can be found in treble-recovery
+Treble compatible recoveries can be found in tools/recoveries
 
 #### VENDOR PARTITIONING ####
 1. Backup all your data to pc
@@ -34,4 +34,4 @@ Use a root browser to travel to that directory, place the mido zip you want to p
 Vendor patches must be installed only after the first boot is completed
 
 #### VENDOR PATCHES ####
-Patches to be applied after flashing mido treble roms are in treble-fixes
+Patches to be applied after flashing mido treble roms are in tools
