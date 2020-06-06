@@ -17,4 +17,4 @@ sed -i 's/$/ firmware_class\.path\=\/vendor\/firmware\_mnt\/image/' $boot-cmdlin
 cat $boot-cmdline | sed 's/ /\n/g' | sort -u | tr '\n' ' ' > boot/bcl && rm $boot-cmdline && mv boot/bcl $boot-cmdline
 ./bin/mkbootimg --kernel $boot-zImage --ramdisk $boot-ramdisk.gz --cmdline "$(cat $boot-cmdline)" --base $(cat $boot-base) --pagesize $(cat $boot-pagesize) -o boot_G.img
 zip -ur $1 boot_G.img && rm boot.img && rm boot_G.img
-mv $1 ${1::4}_PORT.zip && rm -rf META-INF && rm -rf boot
+mv $1 ${1::-4}_PORT.zip && rm -rf META-INF && rm -rf boot
