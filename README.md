@@ -1,4 +1,6 @@
-#### [LINUX / TMUX] [MIDO/OXYGEN] ####
+#### [LINUX / TMUX / COLAB] [MIDO/OXYGEN] ####
+
+#### COLAB INSTANCE ####
 
 <a href="https://colab.research.google.com/github/Jebaitedneko/mido_G_autoporter/blob/master/porter.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Port In Colab"/></a>
 
