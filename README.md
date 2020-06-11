@@ -10,8 +10,18 @@ Treble compatible recoveries can be found in tools/recoveries
 #### VENDOR PARTITIONING ####
 1. Backup all your data to pc
 2. Install treble recovery
-3. Flash 1G repartition zip provided here
-4. Use the volume buttons and select the following: 1GB (1024MB) Vendor Partition FROM THE END OF DATA *DO NOT SELECT SYSTEM*
+3. Flash 1G repartition zip provided in tools folder. You'll enter an interactive mode once flashing starts.
+
+          Follow the next step carefully.
+
+4. Use the volume buttons and select the following: 
+
+          1GB (1024MB) Vendor Partition 
+
+          FROM THE END OF DATA 
+
+          *DO NOT SELECT SYSTEM*
+
 5. Wipe everything except internal storage
 6. Format vendor (if it shows failed to mount)
 7. Reboot recovery
@@ -40,3 +50,9 @@ Vendor patches must be installed only after the first boot is completed
 
 #### VENDOR PATCHES ####
 Patches to be applied after flashing mido treble roms are in tools
+
+AUDIO FIX: flash `audio_fix.zip` from tools folder
+
+CAMERA FIX: flash `camera_fix_encrypted.zip` from tools folder
+
+If it doesn't work, flash `camera_fix_decrypted.zip` from tools folder (the encrypted one must be flashed before this one)
